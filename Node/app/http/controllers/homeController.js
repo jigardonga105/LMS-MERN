@@ -4,11 +4,11 @@ function homeController() {
     return {
         async allBooks(req, res) {
             let books = await Books.find();
-            console.log(books);
+            // console.log(books);
             return res.json(books);
         },
         async addBook(req, res) {
-            console.log("Adding new book request come");
+            // console.log("Adding new book request come");
 
             const { title, author, desc } = req.body;
             // console.log(title, author, desc);

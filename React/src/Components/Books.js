@@ -10,7 +10,7 @@ const Books = () => {
         axios.get('/api/allBooks')
             .then(res => {
                 let allBooks = res.data;
-                console.log(allBooks);
+                // console.log(allBooks);
                 setBooks(allBooks);
             })
             .catch(err => {
@@ -20,7 +20,7 @@ const Books = () => {
 
     return (
         <>
-            <h3 style={ { marginLeft: "15%" } }>Books:</h3>
+            <h3 style={ { marginLeft: "15%", marginTop: "2%" } }>Books:</h3>
             <div className="container row allBooksDiv">
                 {books.map(book => <Book key={book._id} book={book} />)}
             </div>
